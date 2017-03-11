@@ -1,0 +1,17 @@
+<h1>My new app with Angular2</h1>
+<input type="text" [(ngModel)]="firstVariable"/>
+{{firstVariable}}
+{{myObject.attribut1}} {{myObject.attribut2}}
+
+<button (click)='add()'>Click</button>
+<p *ngFor= "let item of tableau; let ind = index; let pair = even">
+    <!--<span *ngIf="pair">-->
+        {{ind}} {{item}}
+        <button (click)='del(ind)'>X</button>
+    <!--</span>-->
+</p>
+
+<input type="text" #captureVariable> 
+{{captureVariable.value}}
+
+<!--le '#' plus un mot permet de capturer le input et d'y faire référence à l'aide du mot collé à # plus loin dans des {{}}-->
