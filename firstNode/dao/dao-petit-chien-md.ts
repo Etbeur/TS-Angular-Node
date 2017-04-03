@@ -1,5 +1,4 @@
 import { PetitChien } from './../entite/petit-chien';
-import { PetitChien } from '../entite/petit-chien';
 import { IDaoPetitChien } from './idao-petit-chien';
 import { Schema, Document} from 'mongoose';
 import * as mongoose from 'mongoose';
