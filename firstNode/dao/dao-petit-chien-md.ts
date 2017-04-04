@@ -67,5 +67,4 @@ export class DaoPetitChienMd implements IDaoPetitChien {
         return modelDog.findOneAndUpdate({id: chien.id}, chien).then(() => true);
     }
 
-
 }

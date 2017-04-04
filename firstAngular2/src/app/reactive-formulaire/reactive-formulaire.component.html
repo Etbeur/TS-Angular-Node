@@ -1,0 +1,45 @@
+<h1>First Reactive Formulaire</h1>
+
+<form (submit)="inscription()" [formGroup]="formulaire">
+  <p>
+    <label for="">Name</label>
+    <input type="text" formControlName="name" />
+      <span [hidden]="formulaire.get('name').valid">
+        You have to give a name with a maximum of 24 characters.
+      </span>
+  </p>
+
+  <p>
+   <label for="">First Name</label>
+   <input type="text" formControlName="firstName" />
+  </p>
+  
+  <p>
+   <label for="">Email</label>
+   <input type="email" formControlName="email" />
+    <span [hidden]="formulaire.get('email').valid">
+        You don't give a correct email!
+    </span>
+  </p>
+  
+  <p>
+   <label for="">Password</label>
+   <input type="password" formControlName="password" /> 
+    <span [hidden]="formulaire.get('password').valid">
+        You have to give a password with a minimum of 3 characters.
+    </span>
+  </p>
+ 
+  <p>
+   <label for="">Password confirmation</label>
+   <input type="password" formControlName="passwordConfirmation" />
+   <span [hidden]="!formulaire.getError('notSamePassword')">
+     The two passwords are differents.
+   </span>
+  </p>
+  
+  <p>
+    <button type="submit" [disabled]="!formulaire.valid">Validate</button>
+  </p>
+
+</form>
