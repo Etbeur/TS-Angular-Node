@@ -8,12 +8,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { ReactiveFormulaireComponent } from './reactive-formulaire/reactive-formulaire.component';
+import {HttpModule} from '@angular/http';
+import {AjaxComponent} from './ajax/ajax.component';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         ReactiveFormsModule,
+        HttpModule,
         RouterModule.forRoot(routes)
     ],
     declarations: [
@@ -22,6 +25,7 @@ import { ReactiveFormulaireComponent } from './reactive-formulaire/reactive-form
         PageNotFoundComponent,
         FormulaireComponent,
         ReactiveFormulaireComponent,
+        AjaxComponent,
     ],
     bootstrap: [
         AppComponent

@@ -1,3 +1,4 @@
+import { FirstAjaxService } from './shared/first-ajax.service';
 import { Component } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
 import { PremierService } from './shared/premier.service';
@@ -15,10 +16,11 @@ import { CompteurService } from './shared/compteur.service';
     template:`
     <a routerLink="/first">First Page</a> 
     <a routerLink="/formulaire">Formulaire</a> 
-    <a routerLink="/reactive-formulaire">Reactive formulaire</a> 
+    <a routerLink="/reactive-formulaire">Reactive formulaire</a>
+    <a routerLink="/ajax">Ajax</a> 
     <a routerLink="/erreur">404 error</a> 
     <router-outlet></router-outlet>`,
-    providers: [PremierService, CompteurService],
+    providers: [PremierService, CompteurService,FirstAjaxService],
     //afficher les 2 attributs dans le template
 
 })

@@ -1,6 +1,7 @@
+import { AjaxComponent } from './ajax/ajax.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { FirstComponent } from './first.component';
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { ReactiveFormulaireComponent } from './reactive-formulaire/reactive-formulaire.component';
 
@@ -9,7 +10,7 @@ import { ReactiveFormulaireComponent } from './reactive-formulaire/reactive-form
  * On définit ici les différentes routes de notre application.
  * Chaque route va avoir une path(une url) et un component qui lui
  * sera associé.
- * On peut lancerlancer des redirection en utilisant redirectTo avec le
+ * On peut lancer des redirections en utilisant redirectTo avec le
  * path de redirection comme argument.
  * On utilise le path '**' pour assigner un comportement à un path qui ne matcherait
  * aucun de ceux que nous avons définit (typiquement pour un 404).
@@ -21,6 +22,7 @@ export const routes:Routes = [
     {path: '', redirectTo: 'first', pathMatch: 'full'},
     {path: 'formulaire', component: FormulaireComponent},
     {path: 'reactive-formulaire', component:ReactiveFormulaireComponent},
+    {path: 'ajax', component:AjaxComponent},
     {path: '**', component:PageNotFoundComponent}
 
 ];
