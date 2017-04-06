@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   providers: [FirstAjaxService],
 })
 export class AjaxComponent implements OnInit {
+  message:string;
+  liste:string[];
+  newItem:string;
 
   constructor(private firstAjaxService:FirstAjaxService) {}
 
@@ -15,9 +18,21 @@ export class AjaxComponent implements OnInit {
   }
 
   getAjaxMessage(){
-    this.firstAjaxService.getMessage();
+    this.firstAjaxService.getMessage()
+    .subscribe((reponse) => this.message = reponse.message);
   }
 
+  getAjaxListe() {
+    this.firstAjaxService.getListe()
+    .subscribe((data) => this.liste = data);
+  }
 
+  addToAjaxListe(newItem){
+    this.firstAjaxService.addToListe(this.newItem)
+    .subscribe((data) => {
+      this.getAjaxListe();
+      alert(data)
+    });
+  }
 
 }

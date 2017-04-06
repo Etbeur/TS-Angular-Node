@@ -1,3 +1,14 @@
 <h1>Test Ajax</h1>
 
 <button (click)="getAjaxMessage()">Start get function</button>
+<p>{{message}}</p>
+
+<button (click)="getAjaxListe()">Start get tableau</button>
+<p *ngFor = "let word of liste">
+    {{word}}
+</p>
+
+<form (submit)="addToAjaxListe()">
+    <input type="text" name="newItem" [(ngModel)] ="newItem"/> 
+    <button type="submit">Add</button>
+</form>
