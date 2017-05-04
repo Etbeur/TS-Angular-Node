@@ -41,7 +41,7 @@ private wsUrl:string = 'http://192.168.1.92:9090/premier-router';
      * Le service Http de angular n'utilise ni les Promise ni les Callback mais un "nouveau"
      * concept de programmation appelé Observable pour gérer l'asynchrone. 
      * C'est une composante de ce qu'on appelle la Programmation Réactive dont la librairie Rx
-     * est une des implémentations les plus utilisées (ngular utilise en l'occurence rxjs)
+     * est une des implémentations les plus utilisées (Angular utilise en l'occurence rxjs)
      * Pour simplifier, on pourrait dire qu'au lieu d'utiliser .then() et .catch() sur le retour
      * de notre requête, on utilisera .subscribe() qui attendra 3 arguments (mais surtout deux
      * en fait), une fonction à lancer dans le cas d'une requête réussie, pour manipuler la
@@ -56,7 +56,7 @@ private wsUrl:string = 'http://192.168.1.92:9090/premier-router';
    * quoi faire des informations récupérées par la requête, mais en l'occurence on ne veut pas
    * retourner toutes les informations de la requête de notre component pour des raisons de 
    * sécurité, on ne veut lui envoyer que le body qu'on obtient avec la méthode .json() de la 
-   * rpéponse.
+   * réponse.
    * On utilise donc l'opérateur .map() qui va renvoyer un nouvel observable en modifiant le
    * contenu de celui ci selon la fonction qu'on lui fournit.
    */

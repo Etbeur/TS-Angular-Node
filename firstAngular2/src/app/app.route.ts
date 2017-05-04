@@ -1,3 +1,6 @@
+import { PipesComponent } from './pipes/pipes.component';
+import { DirectivesAttributComponent } from './directives-attribut/directives-attribut.component';
+import { ListeUsersComponent } from './liste-users/liste-users.component';
 import { AjaxComponent } from './ajax/ajax.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { FirstComponent } from './first.component';
@@ -23,6 +26,9 @@ export const routes:Routes = [
     {path: 'formulaire', component: FormulaireComponent},
     {path: 'reactive-formulaire', component:ReactiveFormulaireComponent},
     {path: 'ajax', component:AjaxComponent},
+    {path: 'list', component:ListeUsersComponent},
+    {path: 'directives-attribut', component:DirectivesAttributComponent},
+    {path: 'pipe', component:PipesComponent},
     {path: '**', component:PageNotFoundComponent}
 
 ];

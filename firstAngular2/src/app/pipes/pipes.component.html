@@ -1,0 +1,17 @@
+<p>
+  <!--Un Pipe est une méthode de transformation de données que l'on pourra appliquer
+  à la volée sur les variables dans le template. Le Pipe ne modifie pas la valeur 
+  originale de la variable, c'est surtout un outil pour l'affichage-->
+  My date is: {{myDate | date:'dd/MM/yyyy'}} {{'test' | uppercase }}
+
+  <input type="radio" name="dateStyle" value="dd/MM/yyyy" [(ngModel)]="dateStyle">
+
+  <input type="radio" name="dateStyle" value="dd-MM-yyyy" [(ngModel)]="dateStyle">
+  <span>
+    {{10 | currency:'USD':true}}
+  </span> {{ 'Test Pipe' | uppercase | exemple}}
+</p>
+
+<p>
+  Taux de change: {{1 | currencyChange: 'USD':'EUR' | async}}
+</p>

@@ -1,0 +1,21 @@
+<form [formGroup]="formulaireModif" (submit)="clickSave()">
+<ul>
+  <li>
+    Id : {{userInfos._id}}
+  </li>
+  <li>
+    Name : <input type="text" formControlName="name"/>
+  </li>
+  <li>
+    First Name : <input type="text" formControlName="firstName"/>
+  </li>
+  <li>
+    Email : <input type="email" formControlName="email"/>
+  </li>
+</ul>
+<button>Save</button>
+</form>
+
+<button (click)="clickDelete()">Delete</button>
+
+<button (click)="clickEdit()">Edit</button>

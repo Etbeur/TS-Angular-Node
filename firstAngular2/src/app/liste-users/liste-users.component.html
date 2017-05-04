@@ -1,0 +1,20 @@
+<h1>Users List</h1>
+
+<ul>
+  <li *ngFor="let user of liste">
+    <!--Au click sur l'email de l'utilisateur, on assigne l'utilisateur actuel à la variable
+    infos du ListeUsersComponent-->
+    <button (click)="infos = user">{{user.email}}</button>
+  </li>
+</ul>
+
+<!--Ici, on fait appel au DetailUserComponent et on fournit à celui-ci une valeur
+à sa variable userInfos. En l'occurence on lui assigne le infos.
+Si on voit un [something]="" dans un component, on peut être quasi sûr que côté component
+il y aura une variable @Input()something (ou @Input('something')nomVariable alternativement-->
+
+<app-detail-user *ngIf="infos"
+                  [userInfos]="infos"
+                  (onDelete)="deleteCurrentUser($event)"
+                  (onSave)="saveModifiedUser($event)">
+</app-detail-user>

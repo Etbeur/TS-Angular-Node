@@ -18,6 +18,9 @@ import { CompteurService } from './shared/compteur.service';
     <a routerLink="/formulaire">Formulaire</a> 
     <a routerLink="/reactive-formulaire">Reactive formulaire</a>
     <a routerLink="/ajax">Ajax</a> 
+    <a routerLink="/list">Users list</a> 
+    <a routerLink="/directives-attribut">Directives Attribut</a> 
+    <a routerLink="/pipe">Pipe</a> 
     <a routerLink="/erreur">404 error</a> 
     <router-outlet></router-outlet>`,
     providers: [PremierService, CompteurService,FirstAjaxService],
