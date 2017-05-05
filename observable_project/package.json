@@ -1,0 +1,19 @@
+{
+  "name": "observable_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "serve":"webpack-dev-server --watch"
+  },
+  "author": "etbeur",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "rxjs": "^5.3.0"
+  }
+}

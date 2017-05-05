@@ -1,0 +1,3 @@
+#Excluded folders
+node_modules
+mongoDB
